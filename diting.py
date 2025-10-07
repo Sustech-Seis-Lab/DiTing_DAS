@@ -266,7 +266,7 @@ def DiTing_EQDet_PhasePick_predict(stream, window_length=10000, step_size=10000,
         t_req = time.time()
         try:
             response = requests.post(
-                "http://124.17.4.221:30589/ybmodel01/dpk",
+                "http://127.0.0.0:10888/inference/",
                 json={'array_data':cleaned_data},
             )
             print("API请求时间：", time.time()-t_req)
